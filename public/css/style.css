@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font: 16px "Poppins", sans-serif;
+}
+
+body {
+  background: #FFD600 ;
+  -webkit-font-smoothing: antialiased
+}
+
+button {
+  cursor: pointer;
+}
