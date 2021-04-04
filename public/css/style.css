@@ -5,6 +5,16 @@
   box-sizing: border-box;
   font-weight: 400;
   font: 16px "Poppins", sans-serif;
+  color: #191C24;
+}
+
+.highlight {
+  display: inline-block;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
 }
 
 body {
