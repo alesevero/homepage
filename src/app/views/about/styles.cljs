@@ -224,13 +224,12 @@
                                          :height "12px"
                                          :z-index -1}]]})
 
-(def footer {:width "100%"
-             :max-width "1120px"
-             :height "40px"
-             :display "flex"
-             :justify-content "space-between"
-             ::stylefy/sub-styles {:text {:font-size "16px"
-                                          :font-family "Playfair Display"}
-                                   :strong {:font-size "16px"
-                                            :font-family "Playfair Display"
-                                            :font-weight "700"}}})
+(def strong-yellow {:font-weight "600"
+                    :font-family "Playfair Display"
+                    :font-size "24px"
+                    :color "#FFD600"})
+
+(def strong-black {:font-weight "600"
+                   :font-family "Playfair Display"
+                   :font-size "24px"
+                   :color "#191C24"})

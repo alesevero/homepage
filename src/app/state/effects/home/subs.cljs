@@ -10,3 +10,8 @@
  :more
  (fn [db _]
    (get-in db [:more])))
+
+(rf/reg-sub
+ :crafts
+ (fn [db _]
+   (get-in db [:crafts])))

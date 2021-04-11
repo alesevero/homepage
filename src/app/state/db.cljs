@@ -28,7 +28,33 @@
                  :title "Find Me"
                  :description "Let's have a conversation."
                  :link-text "Where am I? >"
-                 :href "#find-me"}]})
+                 :href "#find-me"}]
+         :crafts [{:id 1
+                   :title "Business"
+                   :description "There is no such thing as engineering without
+                                 business. Having worked in large and small
+                                 companies, I am able to learn and understand
+                                 business in a fast-paced rhythm, being able to
+                                 deliver high-grade software that fullfils the
+                                 business domain's requirements."}
+                  {:id 2
+                   :title "Engineering"
+                   :description "From back-end, to front-end and finally
+                                 full-stack development, I have the knowledge
+                                 needed build scalable, robust, reliable
+                                 software. Design Patterns, micro services,
+                                 Object-Oriented and Functional Programming;
+                                 Java, Javascript and Clojure(Script); Spring,
+                                 Node and React (Native). The list is endless."}
+                  {:id 3
+                   :title "Design"
+                   :description "Each product is unique, and so are its user
+                                 needs. I can easily build methods and run
+                                 design thinking sessions, researches, build
+                                 high and low-fidelity prototypes, as well do
+                                 testing and validation of a product. All of
+                                 that making rational decisions that impact the
+                                 end user experience."}]})
 
 (rf/reg-event-db
  :initialize-db
