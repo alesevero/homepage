@@ -6,6 +6,8 @@
             :height "40px"
             :display "flex"
             :justify-content "space-between"
+            :position "absolute"
+            :bottom "0"
             ::stylefy/sub-styles {:text {:font-size "16px"
                                          :font-family "Playfair Display"}
                                   :strong {:font-size "16px"

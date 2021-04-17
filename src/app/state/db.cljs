@@ -54,7 +54,16 @@
                                  high and low-fidelity prototypes, as well do
                                  testing and validation of a product. All of
                                  that making rational decisions that impact the
-                                 end user experience."}]})
+                                 end user experience."}]
+         :social-links [{:id 1
+                         :title "Linkedin"
+                         :href ""}
+                        {:id 2
+                         :title "Medium"
+                         :href ""}
+                        {:id 3
+                         :title "Github"
+                         :href ""}]})
 
 (rf/reg-event-db
  :initialize-db

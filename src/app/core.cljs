@@ -6,6 +6,7 @@
             [app.state.effects.nav.subs]
             [app.state.effects.nav.events]
             [app.state.effects.home.subs]
+            [app.state.effects.findme.subs]
             [app.routes :refer [routes]]
             [app.views.navigation.header :refer [header]]))
 

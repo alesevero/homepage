@@ -1,6 +1,7 @@
 (ns app.routes
   (:require [re-frame.core :as rf]
-            [app.views.about.home :refer [home]]))
+            [app.views.about.home :refer [home]]
+            [app.views.findme.findme :refer [findme]]))
 
 (defn routes
   []
@@ -8,5 +9,5 @@
     (case active-nav
       :about [home]
       :work [:<>]
-      :find-me [:<>]
+      :find-me [findme]
       [home])))

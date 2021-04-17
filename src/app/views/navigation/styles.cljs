@@ -22,13 +22,19 @@
 (def container {:style {:width "100%"
                         :display "flex"
                         :justify-content "center"
+                        :align-items "center"
                         :position "absolute"}})
 
 (def header-container {:style {:width "100%"
                                :max-width "1120px"
                                :display "flex"
                                :align-items "center"
-                               :padding-top "32px"}})
+                               :margin-top "32px"}})
+
+(def nav-item-container {:style {:margin-left "auto"
+                                 :height "48px"
+                                 :display "flex"
+                                 :align-items "center"}})
 
 (def title {:font-size "32px"
             :font-weight "800"

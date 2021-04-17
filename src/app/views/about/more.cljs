@@ -9,7 +9,7 @@
                                             more-detail-container
                                             groups-container
                                             more-title
-                                            more-description
+                                            text-black
                                             more-link
                                             more-description-container]]
             [app.components.footer :refer [footer]]
@@ -17,25 +17,24 @@
 
 (defn more
   []
-  [:div (use-style more-container)
-   [:div (use-style more-contents)
-    [:div (use-style more-header-container)
-     [:h2 (use-style more-header-title)
+  [:div more-container
+   [:div more-contents
+    [:div more-header-container
+     [:h2 more-header-title
       "Human." [:br] "Learner." [:br] "Thinker."]
-     [:p (use-style more-header-description)
+     [:p more-header-description
       "There's more than that, though."]]]
-   [:div (use-style groups-container)
+   [:div groups-container
     (let [more-list @(rf/subscribe [:more])]
       (for [{:keys [id title description link-text href]} more-list]
         [:div (use-style more-detail-container
                          {:key id})
-         [:div (use-style craft-title-container)
-          [:h3 (use-style more-title) title]]
-         [:div (use-style more-description-container)
-          [:p (use-style more-description) description]
+         [:div craft-title-container
+          [:h3 more-title title]]
+         [:div more-description-container
+          [:p text-black description]
           [:a {:href href}
-           [:p (use-style more-link
-                          {:class "highlight"})
+           [:p.highlight more-link
             link-text]]
           [:hr {:style {:border "1px solid #191C24"
                         :width "100%"}}]]]))]

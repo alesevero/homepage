@@ -5,6 +5,7 @@
             [app.views.navigation.styles :refer [link
                                                  container
                                                  header-container
+                                                 nav-item-container
                                                  title]]))
 
 
@@ -13,8 +14,9 @@
   (let [active-nav @(rf/subscribe [:active-nav])]
     [:div container
      [:div header-container
-      [:h1 (use-style title {:class "highlight"}) "A."]
-      [:div {:style {:margin-left "auto"}}
+      (when (not (= active-nav :about))
+        [:h1 (use-style title {:class "highlight"}) "A|"])
+      [:div nav-item-container
        [nav-item {:id :about
                   :name "ABOUT"
                   :dispatch #(rf/dispatch [:set-active-nav :about])
