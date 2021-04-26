@@ -5,7 +5,8 @@
                            :display "flex"
                            :flex-direction "column"
                            :justify-content "center"
-                           :align-items "center"}))
+                           :align-items "center"
+                           :background "#191C24"}))
 
 (def contents (use-style {:width "100%"
                           :max-width "1120px"
@@ -13,20 +14,14 @@
                           :flex-direction "column"
                           :align-items "flex-start"
                           :justify-content "center"
-                          :height "100vh"}))
+                          :height "calc(100vh - 40px)"}))
 
-(def title {:font-size "54px"
+(def title {:font-size "64px"
             :font-weight "800"
             :margin-bottom "32px"
-            ::stylefy/mode [[:after {:position "absolute"
-                                     :background-color "#EBEBEB"
-                                     :width "100%"
-                                     :bottom "20%"
-                                     :left 0
-                                     :height "20px"
-                                     :z-index -1}]]})
+            :color "#FFD600"})
 
-(def text (use-style {:color "#191C24"
+(def text (use-style {:color "#EBEBEB"
                       :font-size "20px"
                       :line-height "32px"
                       :margin-bottom "32px"
@@ -38,14 +33,8 @@
 
 (def link {:font-size "28px"
            :font-weight "700"
+           :color "#FFD600"
+           :margin-right "48px"
            :padding "16px 0"
            :margin-bottom "8px"
-           :transition "opacity 0.6s"
-           ::stylefy/mode [[:after {:position "absolute"
-                                    :background-color "#EBEBEB"
-                                    :width "100%"
-                                    :bottom "28%"
-                                    :left 0
-                                    :height "16px"
-                                    :z-index -1}]
-                           [:hover {:opacity "0.6"}]]})
+           :transition "opacity 0.6s"})

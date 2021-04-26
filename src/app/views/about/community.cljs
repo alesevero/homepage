@@ -8,7 +8,7 @@
                                             latest-articles-title
                                             articles-container
                                             article-title
-                                            article-link
+                                            link
                                             article-container
                                             strong-black
                                             text-black]]
@@ -38,9 +38,10 @@
                            {:key id})
            [:h4 article-title title]
            [:p text-black subtitle]
-           [:a {:href href}
-            [:p (use-style article-link
-                           {:class "highlight"})
+           [:div {:style {:display "flex"
+                          :width "100%"}}
+            [:a (use-style link
+                           {:href href})
              "Read it >"]]
            [:hr {:style {:border "1px solid #191C24"
                          :margin-bottom "16px"}}]])]])]])

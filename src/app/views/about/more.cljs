@@ -10,7 +10,7 @@
                                             groups-container
                                             more-title
                                             text-black
-                                            more-link
+                                            link
                                             more-description-container]]
             [app.components.footer :refer [footer]]
             [re-frame.core :as rf]))
@@ -23,19 +23,18 @@
      [:h2 more-header-title
       "Human." [:br] "Learner." [:br] "Thinker."]
      [:p more-header-description
-      "There's more than that, though."]]]
-   [:div groups-container
-    (let [more-list @(rf/subscribe [:more])]
-      (for [{:keys [id title description link-text href]} more-list]
-        [:div (use-style more-detail-container
-                         {:key id})
-         [:div craft-title-container
-          [:h3 more-title title]]
-         [:div more-description-container
-          [:p text-black description]
-          [:a {:href href}
-           [:p.highlight more-link
-            link-text]]
-          [:hr {:style {:border "1px solid #191C24"
-                        :width "100%"}}]]]))]
+      "There's more than that, though."]]
+    [:div groups-container
+     (let [more-list @(rf/subscribe [:more])]
+       (for [{:keys [id title description link-text href]} more-list]
+         [:div (use-style more-detail-container
+                          {:key id})
+          [:div craft-title-container
+           [:h3 more-title title]]
+          [:div more-description-container
+           [:p text-black description]
+           [:a (use-style link {:href href})
+            link-text]
+           [:hr {:style {:border "1px solid #191C24"
+                         :width "100%"}}]]]))]]
    [footer "#EBEBEB"]])

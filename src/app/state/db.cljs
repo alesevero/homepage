@@ -57,13 +57,16 @@
                                  end user experience."}]
          :social-links [{:id 1
                          :title "Linkedin"
-                         :href ""}
+                         :href "https://www.linkedin.com/in/alesevero/"}
                         {:id 2
                          :title "Medium"
-                         :href ""}
+                         :href "https://aleseverojr.medium.com"}
                         {:id 3
                          :title "Github"
-                         :href ""}]})
+                         :href "https://github.com/alesevero"}
+                        {:id 4
+                         :title "Instagram"
+                         :href "https://www.instagram.com/eu.alesevero/"}]})
 
 (rf/reg-event-db
  :initialize-db

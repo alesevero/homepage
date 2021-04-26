@@ -1,23 +1,13 @@
-(ns app.views.navigation.styles
-  (:require [stylefy.core :as stylefy]))
+(ns app.views.navigation.styles)
 
 (defn link
   [id active-nav]
-  {:color "#191C24"
-   :text-decoration "none"
+  {:color (if (= active-nav id) "#FFD600" "#EBEBEB")
    :font-size "16px"
    :font-weight (when (= active-nav id) "700")
    :margin "8px"
    :padding "0px"
-   :transition "opacity 0.6s"
-   ::stylefy/mode [[:hover {:opacity "0.6"}]
-                   [:after {:position "absolute"
-                            :background-color "#EBEBEB"
-                            :width "100%"
-                            :bottom "2%"
-                            :left 0
-                            :height "12px"
-                            :z-index -1}]]})
+   :transition "opacity 0.6s"})
 
 (def container {:style {:width "100%"
                         :display "flex"
@@ -40,10 +30,4 @@
             :font-weight "800"
             :display "inline-block"
             :position "relative"
-            ::stylefy/mode [[:after {:position "absolute"
-                                     :background-color "#EBEBEB"
-                                     :width "100%"
-                                     :bottom "20%"
-                                     :left 0
-                                     :height "12px"
-                                     :z-index -1}]]})
+            :color "#FFD600"})

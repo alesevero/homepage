@@ -6,13 +6,13 @@
             :height "40px"
             :display "flex"
             :justify-content "space-between"
-            :position "absolute"
-            :bottom "0"
             ::stylefy/sub-styles {:text {:font-size "16px"
-                                         :font-family "Playfair Display"}
+                                         :font-family "Playfair Display"
+                                         :color "#EBEBEB"}
                                   :strong {:font-size "16px"
                                            :font-family "Playfair Display"
-                                           :font-weight "700"}}})
+                                           :font-weight "700"
+                                           :color "#FFD600"}}})
 
 (defn footer
   []

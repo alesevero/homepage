@@ -23,9 +23,7 @@
      (let [social-links @(rf/subscribe [:social-links])]
        (for [{:keys [id title href]} social-links]
          [:a {:href href
-              :style {:margin-right "48px"}
+              :style link
               :key id}
-          [:p (use-style link
-                         {:class "highlight"})
-           title]]))]
-    [footer]]])
+          title]))]]
+   [footer]])
