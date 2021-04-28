@@ -46,8 +46,7 @@
                               :font-weight "700"
                               :margin-bottom "46px"}))
 
-(def bold-container (use-style {:background "#EBEBEB"
-                                :width "100%"
+(def bold-container (use-style {:width "100%"
                                 :display "flex"
                                 :flex-direction "column"
                                 :align-items "center"
@@ -62,13 +61,17 @@
                                    :font-weight "800"
                                    :padding "16px"
                                    :background "#FFD600"
-                                   :margin-top "-68px"}))
+                                   :margin-top "-32px"}))
+
+(def header-description-div (use-style {:margin-bottom "24px"
+                                        :margin-top "40px"
+                                        :margin-left "32px"}))
 
 (def groups-container (use-style {:display "flex"
                                   :flex-direction "column"
                                   :justify-content "center"
                                   :align-items "flex-start"
-                                  :margin "128px 0"
+                                  :margin "64px 0 128px 0"
                                   :width "100%"
                                   :max-width "1120px"}))
 
@@ -81,49 +84,42 @@
 
 (def craft-title (use-style {:font-size "40px"
                              :font-height "32px"
-                             :font-weight "700"}))
+                             :font-weight "700"
+                             :color "#FFD600"}))
 
 (def community-container (use-style {:width "100%"
                                      :display "flex"
                                      :flex-direction "column"
                                      :align-items "center"
                                      :justify-content "center"
-                                     :background-color "#FFD600"}))
+                                     :margin-bottom "64px"}))
 
 (def community-contents (use-style {:width "100%"
                                     :max-width "1120px"
-                                    :margin-top "64px"
                                     :margin-bottom "128px"}))
 
-(def community-title {:font-size "64px"
+(def community-title {:font-size "54px"
                       :font-weight "800"
-                      :margin-bottom "20px"})
+                      :margin-bottom "20px"
+                      :color "#FFD600"})
 
 (def latest-articles-container (use-style {:display "flex"}))
 
 (def latest-articles-title-container (use-style {:min-width "400px"}))
 
 (def latest-articles-title (use-style {:font-size "40px"
-                                       :font-weight "700"}))
+                                       :font-weight "700"
+                                       :color "#FFD600"}))
 
 (def articles-container (use-style {:width "100%"}))
 
 (def article-container (use-style {:margin-bottom "48px"}))
 
 (def article-title (use-style {:font-size "28px"
-                               :font-weight "500"}))
+                               :font-weight "500"
+                               :color "#EBEBEB"}))
 
-(def link {:font-size "20px"
-           :font-weight "700"
-           :font-family "Playfair Display"
-           :padding "16px 0"
-           :margin-bottom "16px"
-           :margin-left "auto"
-           :transition "opacity 0.6s"
-           ::stylefy/mode [[:hover {:opacity "0.6"}]]})
-
-(def more-container (use-style {:background "#EBEBEB"
-                                :width "100%"
+(def more-container (use-style {:width "100%"
                                 :display "flex"
                                 :flex-direction "column"
                                 :align-items "center"
@@ -132,35 +128,37 @@
 (def more-contents (use-style {:width "100%"
                                :max-width "1120px"}))
 
-(def more-header-container (use-style {:display "flex"}))
+(def more-header-container (use-style {:display "flex"
+                                       :flex-direction "column"}))
 
-(def more-header-title (use-style {:font-size "54px"
-                                   :font-weight "800"
-                                   :padding "16px 64px 16px 16px"
-                                   :color "#EBEBEB"
-                                   :background "#191C24"
-                                   :margin-top "-68px"}))
+(def more-title-container (use-style {:width "100%"
+                                      :display "flex"
+                                      :flex-direction "column"}))
 
-(def more-header-description (use-style {:padding-left "32px"
-                                         :padding-top "96px"
-                                         :font-size "24px"
+(def more-header-description (use-style {:font-size "24px"
                                          :font-weight "700"
-                                         :font-family "Playfair Display"}))
+                                         :font-family "Playfair Display"
+                                         :color "#EBEBEB"}))
 
-(def more-detail-container {:display "flex"
-                            :width "100%"
-                            :flex-direction "row"
-                            :justify-content "space-between"
-                            :margin "24px 0"})
-
-(def more-title (use-style {:font-size "40px"
-                            :font-height "32px"
-                            :font-weight "700"}))
+(def more-detail-container {:style {:display "flex"
+                                    :width "100%"
+                                    :flex-direction "row"
+                                    :justify-content "space-between"
+                                    :margin "24px 0"}})
 
 (def more-description-container (use-style {:width "100%"
                                             :display "flex"
                                             :flex-direction "column"
                                             :align-items "flex-start"}))
+
+(def big-title {:style {:font-size "54px"
+                        :font-weight "800"
+                        :color "#FFD600"}})
+
+(def small-title {:style {:font-size "40px"
+                          :font-height "32px"
+                          :font-weight "700"
+                          :color "#FFD600"}})
 
 (defn text
   [color]
@@ -170,28 +168,19 @@
    :margin-bottom "32px"
    :font-family "Playfair Display"})
 
-(def text-yellow
-  (use-style (text "#FFD600")))
-
 (def text-gray
   (use-style (text "#EBEBEB")))
-
-(def text-black
-  (use-style (text "#191C24")))
 
 (def strong-yellow
   (use-style (merge (text "#FFD600")
                     {:font-weight "600"})))
 
-(def strong-gray
-  (use-style (merge (text "#EBEBEB")
-                    {:font-weight "600"})))
-
-(def strong-black
-  (use-style (merge (text "#191C24")
-                    {:font-weight "600"})))
-
-(def header-description-div
-  (use-style {:margin-bottom "24px"
-              :margin-top "40px"
-              :margin-left "32px"}))
+(def link {:font-size "20px"
+           :font-weight "700"
+           :font-family "Playfair Display"
+           :padding "16px 0"
+           :margin-bottom "16px"
+           :margin-left "auto"
+           :color "#EBEBEB"
+           :transition "opacity 0.6s"
+           ::stylefy/mode [[:hover {:opacity "0.6"}]]})

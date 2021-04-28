@@ -10,8 +10,8 @@
                                             bold-header-title
                                             craft-container
                                             header-description-div
-                                            strong-black
-                                            text-black]]))
+                                            strong-yellow
+                                            text-gray]]))
 
 (defn bold
   []
@@ -21,13 +21,13 @@
      [:h2 bold-header-title
       "Bold. Creative. Strategic."]
      [:div header-description-div
-      [:p text-black
+      [:p text-gray
        "My Bachelor's Degree in Computer Engineering and my two MBAs in User
           Experience and Startup Development give me an wide array of tools to
-          transit between busines, design and engineering teams, "
-       [:strong strong-black "streamlining communication,"]
+          transit between business, design and engineering teams, "
+       [:strong strong-yellow "streamlining communication,"]
        " creating a "
-       [:strong strong-black
+       [:strong strong-yellow
         "safe, noise-free collaboration environment,"]
        " in order to deliver high-quality software."]]]]
    [:div groups-container
@@ -37,4 +37,4 @@
                          {:key id})
          [:div craft-title-container
           [:h3 craft-title title]]
-         [:p text-black description]]))]])
+         [:p text-gray description]]))]])

@@ -17,17 +17,17 @@
          :more [{:id 1
                  :title "Projects"
                  :description "Because software engineers need to engineer."
-                 :link-text "Take a look >"
+                 :link-text "Take a look"
                  :href "#work"}
                 {:id 2
                  :title "Writing"
                  :description "Talk about a dev that likes to write, eh?"
-                 :link-text "Read them all >"
+                 :link-text "Read them all"
                  :href "https://aleseverojr.medium.com"}
                 {:id 3
                  :title "Find Me"
                  :description "Let's have a conversation."
-                 :link-text "Where am I? >"
+                 :link-text "Where am I?"
                  :href "#find-me"}]
          :crafts [{:id 1
                    :title "Business"

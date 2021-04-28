@@ -10,8 +10,8 @@
                                             article-title
                                             link
                                             article-container
-                                            strong-black
-                                            text-black]]
+                                            strong-yellow
+                                            text-gray]]
             [re-frame.core :as rf]))
 
 (defn community
@@ -21,12 +21,12 @@
     [:h2 (use-style community-title
                     {:class "highlight"})
      "Community"]
-    [:p text-black
+    [:p text-gray
      "As a human being, I’m always looking forward to build rich experiences
           for us as a community. "
-     [:strong strong-black "Sharing"]
+     [:strong strong-yellow "Sharing"]
      " and "
-     [:strong strong-black "collaborating"]
+     [:strong strong-yellow "collaborating"]
      " is an intrinsic part of me."]
     (let [latest-articles @(rf/subscribe [:latest-articles])]
       [:div latest-articles-container
@@ -37,11 +37,11 @@
           [:div (use-style article-container
                            {:key id})
            [:h4 article-title title]
-           [:p text-black subtitle]
+           [:p text-gray subtitle]
            [:div {:style {:display "flex"
                           :width "100%"}}
             [:a (use-style link
                            {:href href})
-             "Read it >"]]
-           [:hr {:style {:border "1px solid #191C24"
+             "Read it"]]
+           [:hr {:style {:border "1px solid #EBEBEB"
                          :margin-bottom "16px"}}]])]])]])
