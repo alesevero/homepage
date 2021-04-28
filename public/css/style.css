@@ -340,7 +340,7 @@ footer strong {
   color: #FFD600;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1120px) {
   .about-contents {
     flex-direction: column-reverse;
     align-items: center;
