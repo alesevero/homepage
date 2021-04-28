@@ -13,7 +13,9 @@
                         :display "flex"
                         :justify-content "center"
                         :align-items "center"
-                        :position "absolute"}})
+                        :position "absolute"
+                        :top 0
+                        :padding "0 32px"}})
 
 (def header-container {:style {:width "100%"
                                :max-width "1120px"

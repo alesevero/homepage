@@ -8,16 +8,6 @@
   color: #191C24;
 }
 
-.highlight {
-  transition: all 0.6s;
-  display: inline-block;
-  position: relative;
-}
-
-.highlight::after {
-  content: '';
-}
-
 body {
   background: #191C24 ;
   -webkit-font-smoothing: antialiased
@@ -25,4 +15,276 @@ body {
 
 button {
   cursor: pointer;
+}
+
+p {
+  color: #EBEBEB;
+  font-size: 20px;
+  font-family: 'Playfair Display';
+  line-height: 32px;
+}
+
+strong {
+  color: #FFD600;
+  font-size: 20px;
+  font-family: 'Playfair Display';
+  line-height: 32px;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 54px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #FFD600;
+}
+
+.small-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFD600;
+}
+
+.small-title-div {
+  min-width: 400px;
+}
+
+a.white {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Playfair Display';
+  padding: 16px 0;
+  margin: 0 0 16px auto;
+  color: #EBEBEB;
+  transition: opacity 0.6s;
+}
+
+.white:hover {
+  opacity: 0.6;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 32px 16px 32px;
+}
+
+.home-title {
+  font-size: 100px;
+  font-weight: 800;
+  color: #FFD600;
+}
+
+.subtitle {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: 'Playfair Display';
+  color: #EBEBEB;
+}
+
+.hello-contents {
+  height: 100vh;
+  width: 100%;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-contents {
+  width: 100%;
+  max-width: 1120px;
+  display: flex;
+  margin: 164px 0;
+}
+
+.about-contents img {
+  width: 360px;
+  height: 382px;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-right {
+  margin-left: 93px;
+}
+
+.about-header {
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFD600;
+  margin-bottom: 46px;
+}
+
+.crafts-contents {
+  width: 100%;
+  max-width: 1120px;
+}
+
+.crafts-header {
+  display: flex;
+}
+
+.crafts-header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  margin-top: -32px;
+  background-color: #FFD600;
+}
+
+.crafts-title {
+  font-size: 54px;
+  font-weight: 800;
+}
+
+.crafts-description {
+  margin: 40px 0 24px 32px;
+}
+
+.group {
+  width: 100%;
+  max-width: 1120px;
+  margin: 64px 0 128px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.group-item {
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.community-contents {
+  width: 100%;
+  max-width: 1120px;
+  margin-bottom: 128px;
+}
+
+.latest-articles-container {
+  display: flex;
+}
+
+div.latest-articles-title {
+  min-width: 400px;
+}
+
+.latest-articles-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFD600;
+}
+
+.articles {
+  width: 100%;
+}
+
+.article {
+  margin-bottom: 48px;
+}
+
+.article-title {
+  font-size: 28px;
+  font-weight: 500;
+  color:#EBEBEB;
+}
+
+.more-contents {
+  width: 100%;
+  max-width: 1120px;
+}
+
+.more-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.more-item {
+  width: 100%;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  width: 100%;
+  max-width: 1120px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+footer strong {
+  font-size: 16px;
+  color: #FFD600;
+}
+
+@media only screen and (max-width: 980px) {
+  .about-contents {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .about-contents img {
+    margin-bottom: 64px;
+    width: 320px;
+    height: 340px;
+  }
+
+  .about-header {
+    font-size: 40px;
+  }
+
+  .about-right {
+    margin-left: 0;
+  }
+
+  .crafts-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .crafts-header-title {
+    margin-bottom: 32px;
+  }
+
+  .crafts-description {
+    margin: 0;
+  }
+
+  .group-item {
+    flex-direction: column;
+  }
+
+  .latest-articles-container {
+    flex-direction: column;
+  }
+
+  div.latest-articles-title {
+    margin: 32px 0;
+  }
+
+  footer {
+    height: 70px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

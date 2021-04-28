@@ -8,13 +8,15 @@
             [app.state.effects.home.subs]
             [app.state.effects.findme.subs]
             [app.routes :refer [routes]]
-            [app.views.navigation.header :refer [header]]))
+            [app.views.navigation.header :refer [header]]
+            [app.components.footer :refer [footer]]))
 
 (defn app
   []
-  [:<>
+  [:div.container
    [header]
-   [routes]])
+   [routes]
+   [footer]])
 
 (defn ^:dev/after-load render
   "Render the toplevel component for this app."

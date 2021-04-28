@@ -10,7 +10,7 @@
 (defn header
   []
   (let [active-nav @(rf/subscribe [:active-nav])]
-    [:div container
+    [:header container
      [:div header-container
       [:div nav-item-container
        [nav-item {:id :about

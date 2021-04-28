@@ -5,7 +5,8 @@
                            :display "flex"
                            :flex-direction "column"
                            :justify-content "center"
-                           :align-items "center"}))
+                           :align-items "center"
+                           :padding "32px"}))
 
 (def hello-container (use-style {:width "100%"
                                  :max-width "1120px"
