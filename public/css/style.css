@@ -60,6 +60,16 @@ a.white {
   transition: opacity 0.6s;
 }
 
+a.yellow {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Playfair Display';
+  padding: 16px 0;
+  margin: 0 0 16px auto;
+  color: #FFD600;
+  transition: opacity 0.6s;
+}
+
 .white:hover {
   opacity: 0.6;
 }
@@ -73,9 +83,21 @@ a.white {
   padding: 0 32px 16px 32px;
 }
 
-.home-title {
-  font-size: 100px;
+.front-page-container {
+  height: 100vh;
+  width: 100%;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.front-page-title {
+  font-size: 64px;
   font-weight: 800;
+  line-height: 64px;
+  margin-bottom: 20px;
   color: #FFD600;
 }
 
@@ -86,14 +108,10 @@ a.white {
   color: #EBEBEB;
 }
 
-.hello-contents {
-  height: 100vh;
-  width: 100%;
-  max-width: 1120px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+.home-title {
+  font-size: 100px;
+  font-weight: 800;
+  color: #FFD600;
 }
 
 .about-contents {
@@ -219,6 +237,91 @@ div.latest-articles-title {
   justify-content: space-between;
 }
 
+.work-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-contents {
+  width: 100%;
+  max-width: 1120px;
+  margin: 128px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.work-description {
+  width: 100%;
+  margin-left: -128px;
+  padding: 64px 16px 64px 164px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.link-container {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.find-me-contents {
+  width: 100%;
+  max-width: 1120px;
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.find-me-links {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.find-me-link {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFD600;
+  margin-right: 48px;
+  padding: 16px 0;
+  margin-bottom: 8px;
+  transition: opacity ease-in-out 0.4s;
+}
+
+.find-me-link:hover {
+  opacity: 0.6;
+}
+
+header {
+  width: 100%;
+  max-width: 1120px;
+  margin-top: 32px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+header div {
+  height: 48px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
 footer {
   width: 100%;
   max-width: 1120px;
@@ -280,6 +383,35 @@ footer strong {
 
   div.latest-articles-title {
     margin: 32px 0;
+  }
+
+  .work-details {
+    flex-direction: column;
+  }
+
+  .work-description {
+    margin-left: 0;
+    margin-top: 32px;
+    padding: 0;
+  }
+
+  .work-details img {
+    width: 360px;
+    height: auto;
+  }
+
+  .find-me-contents {
+    margin-top: 64px;
+    height: calc(100vh - 150px);
+  }
+
+  .find-me-link {
+    font-size: 24px;
+    margin-right: 16px;
+  }
+
+  header {
+    padding: 0 32px;
   }
 
   footer {

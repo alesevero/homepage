@@ -7,7 +7,7 @@
 (defn home
   []
   [:main
-   [:div.hello-contents
+   [:div.front-page-container
     [:h1.home-title "Hello"]
     [:p.subtitle
      "I'm Alexandre, a Software Engineer and UX Designer based in Brazil."]]

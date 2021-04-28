@@ -1,106 +1,90 @@
-(ns app.views.work.work
-  (:require [stylefy.core :refer [use-style]]
-            [app.components.footer :refer [footer]]
-            [app.views.work.styles :refer [main-container
-                                           title-container
-                                           title
-                                           subtitle
-                                           container
-                                           contents
-                                           yellow-title
-                                           details
-                                           text-container
-                                           link
-                                           yellow-bold
-                                           gray-text]]))
+(ns app.views.work.work)
 
 (def divider
-  [:hr {:style {:width "1120px"
+  [:hr {:style {:width "100%"
                 :border "0.5px solid #EBEBEB"}}])
 
 (defn work
   []
-  [:div main-container
-   [:div title-container
-    [:h1 (use-style title) "Software engineering"
+  [:main
+   [:section.front-page-container
+    [:h1.front-page-title "Software engineering"
      [:br]
      "taken to the next level."]
-    [:p subtitle "A brief collection of my experiences and side-projects
-         I have been working so far."]]
-   [:div container
-    [:div contents
-     [:h1 yellow-title "Healthcare." [:br] "Simplified."]
-     [:div details
+    [:p.subtitle "A brief collection of my experiences and side-projects
+                  I have been working so far."]]
+   [:section.work-container
+    [:div.work-contents
+     [:h2.title "Healthcare." [:br] "Simplified."]
+     [:div.work-details
       [:img {:src "assets/ch.png"
              :alt "Collective Health's system screenshot"
              :width "579"
              :height "325"
              :style {:z-index 2}}]
-      [:div text-container
-       [:p gray-text "Collective Health "
-        [:strong yellow-bold "replaces"]
+      [:div.work-description
+       [:p "Collective Health "
+        [:strong "replaces"]
         " a disjointed experience with one
         connected system to drive more value from your total healthcare
         investment."]
-       [:div link
-        [:a (merge {:href "https://collectivehealth.com"}
-                   yellow-bold) "Visit the website."]]]]]]
+       [:div.link-container
+        [:a.yellow {:href "https://collectivehealth.com"}
+         "Visit the website."]]]]]]
    divider
-   [:div container
-    [:div contents
-     [:h1 yellow-title
+   [:section.work-container
+    [:div.work-contents
+     [:h2.title
       "Sicredi's Credit Cards."
       [:br]
       "To live unique experiences."]
-     [:div details
+     [:div.work-details
       [:img {:src "assets/sicredi.png"
              :alt "Sicredi's website screenshot"
              :width "579"
              :height "327"
              :style {:z-index 2}}]
-      [:div text-container
-       [:p gray-text "Sicredi has the ideal credit card for you to make "
-        [:strong yellow-bold "your dreams come true,"]
+      [:div.work-description
+       [:p "Sicredi has the ideal credit card for you to make "
+        [:strong "your dreams come true,"]
         " while bringing "
-        [:strong yellow-bold "simplicity"]
+        [:strong "simplicity"]
         " and "
-        [:strong yellow-bold "security"]
+        [:strong "security"]
         " to your daily routines."]
-       [:div link
-        [:a (merge {:href "https://www.sicredi.com.br/site/cartoes"}
-                   yellow-bold) "Visit the website (Portuguese)."]]]]]]
+       [:div.link-container
+        [:a.yellow {:href "https://www.sicredi.com.br/site/cartoes"}
+         "Visit the website (Portuguese)."]]]]]]
    divider
-   [:div container
-    [:div contents
-     [:h1 yellow-title "The art of" [:br] "money management."]
-     [:div details
+   [:section.work-container
+    [:div.work-contents
+     [:h2.title "The art of" [:br] "money management."]
+     [:div.work-details
       [:img {:src "assets/gobudget.png"
              :alt "Collection of Gobudget's screenshots"
              :width "608"
              :height "388"
              :style {:z-index 2}}]
-      [:div text-container
-       [:p gray-text "GoBudget "
-        [:strong.highlight yellow-bold "redefines"]
+      [:div.work-description
+       [:p "GoBudget "
+        [:strong "redefines"]
         " money management giving you control over your finances."]
-       [:div link
-        [:a (merge {:href "https://upbeat-raman-af363b.netlify.app"}
-                   yellow-bold) "Check out the demo."]]]]]]
+       [:div.link-container
+        [:a.yellow {:href "https://upbeat-raman-af363b.netlify.app"}
+         "Check out the demo."]]]]]]
    divider
-   [:div container
-    [:div contents
-     [:h1 yellow-title "EasyHabit"]
-     [:div details
+   [:section.work-container
+    [:div.work-contents
+     [:h2.title "EasyHabit"]
+     [:div.work-details
       [:img {:src "assets/easyhabit.svg"
              :alt "Screenshots of EasyHabits mobile app in dark and light themes"
              :width "608"
              :height "388"
              :style {:z-index 2}}]
-      [:div text-container
-       [:p gray-text "This easy-peasy-lemon-squeeze habit tracking app let's you "
-        [:strong.highlight yellow-bold "focus on what matters."]]
-       [:div link
-        [:a (merge {:href "https://avsware.github.io/easyhabitapp/"}
-                   yellow-bold) "Discover more about it."]]]]]]
-   [:div {:style {:height "64px"}}]
-   [footer]])
+      [:div.work-description
+       [:p "This easy-peasy-lemon-squeeze habit tracking app let's you "
+        [:strong "focus on what matters."]]
+       [:div.link-container
+        [:a.yellow {:href "https://avsware.github.io/easyhabitapp/"}
+         "Discover more about it."]]]]]]])
