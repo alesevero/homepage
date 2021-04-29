@@ -207,10 +207,22 @@ a {
   height: auto;
 }
 
+.links {
+  display: flex;
+}
+
+.links li {
+  margin-right: 2rem;
+}
+
 @media only screen and (min-width: 768px) {
 
   * {
     font-size: 20px;
+  }
+
+  h1 {
+    font-size: 6rem;
   }
 
   .title {
